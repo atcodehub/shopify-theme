@@ -642,10 +642,6 @@ body {
   margin-top: 1.5rem;
 }
 
-.mt-\[100px\] {
-  margin-top: 100px;
-}
-
 .block {
   display: block;
 }
@@ -700,10 +696,6 @@ body {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[100px\] {
-  width: 100px;
 }
 
 .max-w-7xl {
@@ -1071,10 +1063,6 @@ body {
 
   .lg\:hidden {
     display: none;
-  }
-
-  .lg\:w-\[500px\] {
-    width: 500px;
   }
 
   .lg\:flex-1 {
