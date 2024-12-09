@@ -2,15 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Apply Roboto as the default font to the body */
 @layer base {
   body {
-    @apply bg-red-500 font-sans;
+    font-family: 'Satoshi', sans-serif;
   }
 }
 
-@layer components {
-  .main-top-header {
-    @apply bg-black p-2 text-center text-white;
-  }
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/satoshi/Satoshi-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.customers-reviwe-slider .slick-list {
+  padding: 0 150px 0 150px !important;
+}
+
+/* Apply normal style to all slides */
+.customers-reviwe-slider .slick-slide {
+  transition: filter 0.3s ease;
+  filter: blur(2px);
+  opacity: 0.7;
+}
+
+/* Remove blur effect and restore opacity for visible slides */
+.customers-reviwe-slider .slick-slide.slick-active {
+  filter: blur(0px);
+  opacity: 1;
+}
+
+/* Optionally, add a smooth transition when changing active slides */
+.customers-reviwe-slider .slick-slide {
+  transition: filter 0.3s ease, opacity 0.3s ease;
 }
