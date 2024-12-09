@@ -5,6 +5,12 @@
 /* Apply Roboto as the default font to the body */
 @layer base {
   body {
-    @apply font-sans bg-red-500;
+    @apply bg-red-500 font-sans;
+  }
+}
+
+@layer components {
+  .main-top-header {
+    @apply bg-black p-2 text-center text-white;
   }
 }
