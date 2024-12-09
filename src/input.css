@@ -4,7 +4,7 @@
 
 /* Apply Roboto as the default font to the body */
 @layer base {
-    body {
-      @apply font-sans;
-    }
+  body {
+    @apply font-sans bg-red-500;
   }
+}
