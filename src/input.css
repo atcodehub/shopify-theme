@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Apply Roboto as the default font to the body */
-/* @layer base {
-  body {
-    @apply font-sans;
-  }
-} */
-
 @layer base {
   body {
     font-family: 'Satoshi', sans-serif;
