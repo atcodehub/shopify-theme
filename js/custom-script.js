@@ -103,3 +103,29 @@ const navDialog = document.getElementById("nav-dialog");
 function handleMenu() {
     navDialog.classList.toggle('hidden');
 }
+
+// collection color selector
+function toggleColor(element) {
+    const checkmark = element.querySelector("span");
+
+    // Toggle the checkmark visibility
+    if (checkmark.classList.contains("hidden")) {
+        checkmark.classList.remove("hidden");
+        element.classList.add("border-blue-500");
+    } else {
+        checkmark.classList.add("hidden");
+        element.classList.remove("border-blue-500");
+    }
+}
+
+
+// collection size filter
+function toggleButtonStyle(button) {
+    // Toggle background and text color
+    button.classList.toggle('bg-black');
+    button.classList.toggle('text-white');
+
+    // Reset to default styles if unselected
+    button.classList.toggle('bg-gray-100');
+    button.classList.toggle('text-black');
+}
