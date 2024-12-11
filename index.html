@@ -21,12 +21,19 @@
 <body>
     <!--##########  Website Whole Header  ############ -->
     <header class="bg-white">
-        <div class="bg-black p-2 text-center text-sm text-white">
+        <div
+            class="flex sm:flex-row flex-col justify-center sm:items-center gap-2 sm:gap-0 bg-black py-3 text-center text-sm text-white align-middle">
             <span class="opacity-90 font-normal">Sign up and get 20% off to your first order.</span> <a href="#"
-                class="opacity-100 font-semibold underline">Sign Up Now!</a>
+                class="opacity-100 ml-2 font-semibold underline">Sign Up Now </a>
+
+            <svg class="sm:ml-10 w-5 h-5 self-center" data-slot="icon" fill="none" stroke-width="1.5"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+            </svg>
+
         </div>
 
-        <nav class="flex justify-between items-center mx-auto p-3 w-11/12">
+        <nav class="flex justify-between items-center mx-auto p-4 w-11/12 max-w-8xl">
             <!-- icon for small Devices -->
             <button class="lg:hidden p-3" onclick="handleMenu()">
                 <svg class="w-8 h-8 text-black" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor"
@@ -37,16 +44,16 @@
                 </svg>
             </button>
 
-            <a href="#" class="font-semibold text-3xl text-black uppercase">shop.co</a>
-            <div class="lg:flex gap-5 hidden" id="nav-menu">
+            <a href="#" class="font-integral font-semibold text-3xl text-black uppercase">shop.co</a>
+            <div class="lg:flex gap-5 hidden text-base capitalize" id="nav-menu">
                 <!--######## Dropdown Menu ####### -->
                 <div class="inline-block relative text-left">
                     <div>
                         <button type="button"
-                            class="inline-flex md:justify-center gap-x-1.5 md:bg-white md:px-3 rounded-md w-full font-semibold text-gray-900 text-sm"
+                            class="inline-flex md:justify-center gap-x-1.5 md:bg-white rounded-md w-full"
                             id="menu-button" aria-expanded="false" aria-haspopup="true" onclick="toggleMenu()">
                             Shop
-                            <svg class="w-5 h-5 text-black" data-slot="icon" fill="none" stroke-width="1.5"
+                            <svg class="mt-1 w-5 h-5 text-black" data-slot="icon" fill="none" stroke-width="1.5"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                                 aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5">
@@ -56,7 +63,7 @@
                     </div>
 
                     <div id="menu"
-                        class="right-0 z-10 absolute bg-white shadow-lg mt-2 rounded-md ring-1 ring-black/5 w-56 origin-top-right focus:outline-none hidden"
+                        class="right-0 z-10 absolute hidden bg-white shadow-lg mt-2 rounded-md ring-1 ring-black/5 w-56 origin-top-right focus:outline-none"
                         role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                         <div class="py-1" role="none">
                             <a href="#" class="block px-4 py-2 text-gray-700 text-sm" role="menuitem" tabindex="-1"
@@ -109,7 +116,7 @@
             <div id="nav-dialog" class="z-10 fixed inset-0 hidden lg:hidden bg-white">
                 <div class="bg-black p-2 text-center text-sm text-white">
                     <span class="opacity-90 font-normal">Sign up and get 20% off to your first order.</span> <a href="#"
-                        class="opacity-100 font-satoshi font-semibold underline">Sign Up Now</a>
+                        class="opacity-100 font-semibold underline">Sign Up Now</a>
                 </div>
                 <!-- Cross Icon -->
                 <div id="nav-bar" class="flex justify-between items-center mx-auto p-3 w-11/12">
@@ -175,7 +182,7 @@
                         </div>
 
                         <div id="menu"
-                            class="right-0 z-10 absolute bg-white shadow-lg mt-2 rounded-md ring-1 ring-black/5 w-56 origin-top-right focus:outline-none hidden"
+                            class="right-0 z-10 absolute hidden bg-white shadow-lg mt-2 rounded-md ring-1 ring-black/5 w-56 origin-top-right focus:outline-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                             <div class="py-1" role="none">
                                 <a href="#" class="block px-4 py-2 text-gray-700 text-sm" role="menuitem" tabindex="-1"
@@ -199,40 +206,47 @@
 
     <!--#############  Hero Section  ########## -->
     <div class="bg-brand pt-11 w-full">
-        <div class="flex mx-auto w-11/12">
-            <div class="flex flex-col justify-center gap-5 w-1/2">
-                <h1 class="font-semibold text-3xl">find clothes that matches your style </h1>
-                <p class="">
+        <div class="flex sm:flex-row flex-col mx-auto w-11/12 max-w-8xl">
+            <div class="flex flex-col justify-center gap-5 w-full sm:w-1/2">
+                <h1 class="sm:w-4/5 font-integral font-semibold text-4xl sm:text-6xl">find clothes that matches your
+                    style
+                </h1>
+                <p class="sm:w-4/5 text-secondary text-sm sm:text-base">
                     Browse through our diverse range of meticulously crafted garments, designed to bring out your
                     individuality and cater to your sense of style.
                 </p>
-                <button class="bg-black px-6 py-2 rounded-full w-1/4 text-white">Shop Now</button>
-                <div class="flex flex-row gap-2">
-                    <div class="p-3">
-                        <h1 class="font-semibold text-lg">200+</h1>
-                        <p>International Brands</p>
+                <button
+                    class="bg-black hover:bg-white px-6 py-3 sm:py-2 rounded-full sm:w-1/4 text-white hover:text-black duration-300 ease-in-out">Shop
+                    Now</button>
+                <div class="flex flex-row flex-wrap gap-2">
+                    <div class="p-3 w-[46%] sm:w-auto">
+                        <h1 class="font-semibold text-2xl sm:text-[40px]">200+</h1>
+                        <p class="text-secondary text-sm sm:text-base">International Brands</p>
                     </div>
-                    <div class="border-[#0000001a] border-x-2 p-3">
-                        <h2 class="font-semibold text-lg">2,000+</h2>
-                        <p>High-Quality Products</p>
+                    <div class="border-[#0000001a] sm:border-x-2 px-6 py-3 border-l-2 w-1/2 sm:w-auto">
+                        <h2 class="font-semibold text-2xl sm:text-[40px]">2,000+</h2>
+                        <p class="text-secondary text-sm sm:text-base">High-Quality Products</p>
                     </div>
-                    <div class="p-3">
-                        <h1 class="font-semibold text-lg">30,000+</h1>
-                        <p>Happy Customers</p>
+                    <div class="p-3 w-full sm:w-auto">
+                        <h1 class="font-semibold text-2xl text-center sm:text-start sm:text-[40px]">30,000+
+                        </h1>
+                        <p class="text-center text-secondary text-sm sm:text-start sm:text-base">Happy Customers</p>
                     </div>
                 </div>
             </div>
-            <div class="relative w-1/2">
-                <img class="top-1/2 left-10 absolute w-12 h-auto" src="./images/small-icon.png" alt="">
-                <img class="top-28 right-12 absolute w-24 h-auto" src="./images/big-icon.png" alt="">
-                <img class="w-full h-[580px] object-cover" src="./images/hero.png" alt="">
+            <div class="relative w-full sm:w-1/2">
+                <img class="top-1/4 sm:top-1/2 left-10 absolute w-12 h-auto" src="./images/small-icon.png"
+                    alt="Small Icon">
+                <img class="top-4 sm:top-28 right-4 sm:right-12 absolute w-24 h-auto" src="./images/big-icon.png"
+                    alt="Big Icon">
+                <img class="w-full h-[448px] sm:h-[580px] object-cover" src="./images/hero.png" alt=" Hero Image">
             </div>
         </div>
     </div>
 
     <!--#########################  slider code ############## -->
     <div class="bg-black m-auto">
-        <div class="mx-auto py-7 w-3/4 slider">
+        <div class="mx-auto py-9 w-3/4 max-w-8xl slider">
             <!-- Slick Slider -->
             <div>
                 <img src="./images/versace.png" alt="versace logo " class="">
@@ -255,19 +269,19 @@
 
 
     <!--########## New Arrivals  Section ###############-->
-    <div class="border-[#0000001a] mx-auto pt-20 pb-7 border-b-2 w-11/12">
-        <div class="pb-10 text-center">
-            <h1 class="text-5xl uppercase">new arrivals</h1>
+    <div class="border-[#0000001a] mx-auto pt-20 pb-10 border-b-2 w-11/12 max-w-8xl">
+        <div class="pb-12 text-center">
+            <h1 class="font-bold font-integral text-3xl sm:text-5xl uppercase">new arrivals</h1>
         </div>
 
         <!-- product dispay section -->
-        <div class="gap-5 grid grid-cols-4">
+        <div class="gap-5 grid grid-cols-2 sm:grid-cols-4">
             <!-- Singel Product Design -->
-            <div class="flex flex-col gap-2">
-                <div class="bg-product p-5 rounded-lg">
+            <div class="flex flex-col gap-2 cursor-pointer">
+                <div class="bg-product p-5 rounded-lg duration-500 ease-in-out hover:scale-105">
                     <img class="w-full h-full" src="./images/product1.png" alt="">
                 </div>
-                <h2>t-shirt with tape datails</h2>
+                <h2 class="product-title">t-shirt with tape datails</h2>
                 <div class="flex">
                     <!-- Full Star -->
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
@@ -299,19 +313,19 @@
                             fill="url(#half-star-gradient)" />
                     </svg>
                     <div>
-                        <p>4.5 / 5</p>
+                        <p>4.5/<span class="text-secondary">5</span></p>
                     </div>
                 </div>
                 <div>
-                    <h2 class="font-bold text-2xl">$120</h2>
+                    <h2 class="font-bold text-xl sm:text-2xl">$120</h2>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-2">
-                <div class="bg-product p-5 rounded-lg">
+            <div class="flex flex-col gap-2 cursor-pointer">
+                <div class="bg-product p-5 rounded-lg duration-500 ease-in-out hover:scale-105">
                     <img class="w-full h-full" src="./images/product1.png" alt="">
                 </div>
-                <h2> skinny fit jeans </h2>
+                <h2 class="product-title"> skinny fit jeans </h2>
                 <div class="flex">
                     <!-- Full Star -->
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
@@ -339,25 +353,26 @@
                             fill="url(#half-star-gradient)" />
                     </svg>
                     <div>
-                        <p>3.5 / 5</p>
+                        <p>3.5/<span class="text-secondary">5</span></p>
                     </div>
                 </div>
-                <div class="flex gap-5">
-                    <h2 class="font-bold text-2xl">$240</h2>
-                    <h2 class="font-bold text-[#00000066] text-2xl line-through decoration-[#00000066] decoration-2">
+                <div class="flex gap-2 sm:gap-5">
+                    <h2 class="font-bold text-xl sm:text-2xl">$240</h2>
+                    <h2
+                        class="font-bold text-[#00000066] text-xl sm:text-2xl line-through decoration-[#00000066] decoration-2">
                         $240
                     </h2>
-                    <div class="bg-[#ff33331a] px-5 py-2 rounded-2xl">
-                        <h3 class="font-semibold text-[#FF3333] text-sm">-20%</h3>
+                    <div class="bg-[#ff33331a] px-3 sm:px-5 py-1 sm:py-2 rounded-2xl">
+                        <h3 class="font-semibold text-[#FF3333] text-xs sm:text-sm">-20%</h3>
                     </div>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-2">
-                <div class="bg-product p-5 rounded-lg">
+            <div class="flex flex-col gap-2 cursor-pointer">
+                <div class="bg-product p-5 rounded-lg duration-500 ease-in-out hover:scale-105">
                     <img class="w-full h-full" src="./images/product1.png" alt="">
                 </div>
-                <h2>SHIRT checkered shirt</h2>
+                <h2 class="product-title">SHIRT checkered shirt</h2>
                 <div class="flex">
                     <!-- Full Star -->
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
@@ -389,17 +404,17 @@
                             fill="url(#half-star-gradient)" />
                     </svg>
                     <div>
-                        <p>4.5 / 5</p>
+                        <p>4.5/ <span class="text-secondary">5</span> </p>
                     </div>
                 </div>
-                <h2 class="font-bold text-2xl">$180</h2>
+                <h2 class="font-bold text-xl sm:text-2xl">$180</h2>
             </div>
 
-            <div class="flex flex-col gap-2">
-                <div class="bg-product p-5 rounded-lg">
+            <div class="flex flex-col gap-2 cursor-pointer">
+                <div class="bg-product p-5 rounded-lg duration-500 ease-in-out hover:scale-105">
                     <img class="w-full h-full" src="./images/product1.png" alt="">
                 </div>
-                <h2>sleeve striped t-shirt</h2>
+                <h2 class="product-title">sleeve striped t-shirt</h2>
                 <div class="flex">
                     <!-- Full Star -->
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
@@ -431,42 +446,44 @@
                             fill="url(#half-star-gradient)" />
                     </svg>
                     <div>
-                        <p>4.5 / 5</p>
+                        <p>4.5/<span class="text-secondary">5</span></p>
                     </div>
                 </div>
-                <div class="flex gap-5">
-                    <h2 class="font-bold text-2xl">$130</h2>
-                    <h2 class="font-bold text-[#00000066] text-2xl line-through decoration-[#00000066] decoration-2">
+                <div class="flex gap-2 sm:gap-5">
+                    <h2 class="font-bold text-xl sm:text-2xl">$130</h2>
+                    <h2
+                        class="font-bold text-[#00000066] text-xl sm:text-2xl line-through decoration-[#00000066] decoration-2">
                         $160
                     </h2>
-                    <div class="bg-[#ff33331a] px-5 py-2 rounded-2xl">
-                        <h3 class="font-semibold text-[#FF3333] text-sm">-30%</h3>
+                    <div class="bg-[#ff33331a] px-3 sm:px-5 py-1 sm:py-2 rounded-2xl">
+                        <h3 class="font-semibold text-[#FF3333] text-xs sm:text-sm">-30%</h3>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="flex justify-center py-9">
-            <button class="border-2 bg-white px-16 py-2 rounded-3xl font-normal text-black text-lg capitalize">viwe
+            <button
+                class="border-2 bg-white hover:bg-black px-16 py-2 rounded-3xl w-full sm:w-auto font-normal text-black text-lg hover:text-white capitalize duration-300 ease-in-out">viwe
                 all</button>
         </div>
     </div>
 
 
     <!--########## Top Selling  Section ###############-->
-    <div class="mx-auto pt-20 pb-7 w-11/12">
-        <div class="pb-10 text-center">
-            <h1 class="text-5xl uppercase">top selling</h1>
+    <div class="mx-auto pt-20 pb-7 w-11/12 max-w-8xl">
+        <div class="pb-12 text-center">
+            <h1 class="font-bold font-integral text-3xl sm:text-5xl uppercase">top selling</h1>
         </div>
 
         <!-- product dispay section -->
-        <div class="gap-5 grid grid-cols-4">
+        <div class="gap-5 grid grid-cols-2 sm:grid-cols-4">
             <!-- Singel Product Design -->
-            <div class="flex flex-col gap-2">
-                <div class="bg-product p-5 rounded-lg">
+            <div class="flex flex-col gap-2 cursor-pointer">
+                <div class="bg-product p-5 rounded-lg duration-500 ease-in-out hover:scale-105">
                     <img class="w-full h-full" src="./images/product1.png" alt="">
                 </div>
-                <h2> vertical striped shirt </h2>
+                <h2 class="product-title"> vertical striped shirt </h2>
                 <div class="flex">
                     <!-- Full Star -->
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
@@ -487,25 +504,26 @@
                     </svg>
 
                     <div>
-                        <p>5.0 / 5</p>
+                        <p>5.0/<span class="text-secondary">5</span> </p>
                     </div>
                 </div>
-                <div class="flex gap-5">
-                    <h2 class="font-bold text-2xl">$212</h2>
-                    <h2 class="font-bold text-[#00000066] text-2xl line-through decoration-[#00000066] decoration-2">
+                <div class="flex gap-2 sm:gap-5">
+                    <h2 class="font-bold text-xl sm:text-2xl">$212</h2>
+                    <h2
+                        class="font-bold text-[#00000066] text-xl sm:text-2xl line-through decoration-[#00000066] decoration-2">
                         $232
                     </h2>
-                    <div class="bg-[#ff33331a] px-5 py-2 rounded-2xl">
-                        <h3 class="font-semibold text-[#FF3333] text-sm">-20%</h3>
+                    <div class="bg-[#ff33331a] px-3 sm:px-5 py-1 sm:py-2 rounded-2xl">
+                        <h3 class="font-semibold text-[#FF3333] text-xs sm:text-sm">-20%</h3>
                     </div>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-2">
-                <div class="bg-product p-5 rounded-lg">
+            <div class="flex flex-col gap-2 cursor-pointer">
+                <div class="bg-product p-5 rounded-lg duration-500 ease-in-out hover:scale-105">
                     <img class="w-full h-full" src="./images/product1.png" alt="">
                 </div>
-                <h2>courage graphic t-shirt</h2>
+                <h2 class="product-title">courage graphic t-shirt</h2>
                 <div class="flex">
                     <!-- Full Star -->
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
@@ -525,17 +543,17 @@
                             d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
                     </svg>
                     <div>
-                        <p>4.0/ 5</p>
+                        <p>4.0/<span class="text-secondary">5</span> </p>
                     </div>
                 </div>
-                <h2 class="font-bold text-2xl">$145</h2>
+                <h2 class="font-bold text-xl sm:text-2xl">$145</h2>
             </div>
 
-            <div class="flex flex-col gap-2">
-                <div class="bg-product p-5 rounded-lg">
+            <div class="flex flex-col gap-2 cursor-pointer">
+                <div class="bg-product p-5 rounded-lg duration-500 ease-in-out hover:scale-105">
                     <img class="w-full h-full" src="./images/product1.png" alt="">
                 </div>
-                <h2>loose fit burmuda shorts</h2>
+                <h2 class="product-title">loose fit burmuda shorts</h2>
                 <div class="flex">
                     <!-- Full Star -->
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
@@ -553,17 +571,17 @@
 
 
                     <div>
-                        <p>3.0/ 5</p>
+                        <p>3.0/<span class="text-secondary">5</span></p>
                     </div>
                 </div>
-                <h2 class="font-bold text-2xl">$80</h2>
+                <h2 class="font-bold text-xl sm:text-2xl">$80</h2>
             </div>
 
-            <div class="flex flex-col gap-2">
-                <div class="bg-product p-5 rounded-lg">
+            <div class="flex flex-col gap-2 cursor-pointer">
+                <div class="bg-product p-5 rounded-lg duration-500 ease-in-out hover:scale-105">
                     <img class="w-full h-full" src="./images/product1.png" alt="">
                 </div>
-                <h2>faded skinny jeans</h2>
+                <h2 class="product-title">faded skinny jeans</h2>
                 <div class="flex">
                     <!-- Full Star -->
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
@@ -595,47 +613,49 @@
                             fill="url(#half-star-gradient)" />
                     </svg>
                     <div>
-                        <p>4.5 / 5</p>
+                        <p>4.5/<span class="text-secondary">5</span></p>
                     </div>
                 </div>
                 <div>
-                    <h2 class="font-bold text-2xl">$210</h2>
+                    <h2 class="font-bold text-xl sm:text-2xl">$210</h2>
                 </div>
             </div>
 
         </div>
 
         <div class="flex justify-center py-9">
-            <button class="border-2 bg-white px-16 py-2 rounded-3xl font-normal text-black text-lg capitalize">viwe
+            <button
+                class="border-2 bg-white hover:bg-black px-16 py-2 rounded-3xl w-full sm:w-auto font-normal text-black text-lg hover:text-white capitalize duration-300 ease-in-out">viwe
                 all</button>
         </div>
     </div>
 
 
     <!-- ####### dress style section ####### -->
-    <div class="bg-product mx-auto p-12 rounded-[40px] w-11/12">
+    <div class="bg-product mx-auto px-5 sm:px-12 py-16 rounded-[40px] w-11/12 max-w-8xl">
         <div>
-            <h2 class="py-10 font-semibold text-5xl text-center uppercase">BROWSE BY dress STYLE</h2>
+            <h2 class="pb-12 font-bold font-integral text-3xl text-center sm:text-5xl uppercase">BROWSE BY dress STYLE
+            </h2>
         </div>
-        <div class="flex flex-col gap-4">
-            <div class="flex gap-4">
-                <div class="p-3 rounded-xl w-2/5 h-72"
+        <div class="flex flex-col gap-4 font-semibold text-2xl sm:text-3xl capitalize">
+            <div class="flex sm:flex-row flex-col gap-4">
+                <div class="p-3 rounded-xl sm:w-2/5 h-48 sm:h-72"
                     style="background: url('./images/casual.png'); background-repeat: no-repeat; background-size: cover;">
-                    <h2>casual</h2>
+                    <h2 class="">casual</h2>
                 </div>
-                <div class="p-3 rounded-xl w-3/5 h-72"
+                <div class="p-3 rounded-xl sm:w-3/5 h-48 sm:h-72"
                     style="background: url('./images/formal.png'); background-repeat: no-repeat; background-size: cover;">
                     <h2>formal</h2>
                 </div>
             </div>
-            <div class="flex gap-4">
-                <div class="p-3 rounded-xl w-3/5 h-72"
+            <div class="flex sm:flex-row flex-col gap-4">
+                <div class="p-3 rounded-xl sm:w-3/5 h-48 sm:h-72"
                     style="background: url('./images/party.png'); background-repeat: no-repeat; background-size: cover;">
                     <h2>party</h2>
                 </div>
-                <div class="p-3 rounded-xl w-2/5 h-72"
+                <div class="p-3 rounded-xl sm:w-2/5 h-48 sm:h-72"
                     style="background: url('./images/gym.png'); background-repeat: no-repeat; background-size: cover;">
-                    <h2>gym</h2>
+                    <h2> gym</h2>
                 </div>
             </div>
         </div>
@@ -643,228 +663,235 @@
 
 
     <!--########## Customer Reviwe Slider ##########-->
-    <div class="mx-auto py-6 w-11/12">
-        <h2 class="font-semibold text-5xl uppercase">OUR HAPPY CUSTOMERS </h2>
-    </div>
-    <div class="pb-10 w-full">
-        <div class="py-4">
-            <div class="customers-reviwe-slider">
-                <!-- customer Reviwe Singel slide -->
-                <div class="border-[#0000001a] border-2 mx-2 p-6 rounded-2xl h-64">
-                    <!-- 5 star -->
-                    <div class="flex flex-row gap-2">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
+    <div class="mx-auto py-10 sm:py-14 max-w-8xl">
+        <div class="mx-auto py-6 w-11/12">
+            <h2 class="font-bold font-integral text-3xl sm:text-5xl uppercase">OUR HAPPY CUSTOMERS </h2>
+        </div>
+        <div class="w-full">
+            <div class="py-4">
+                <div class="customers-reviwe-slider">
+                    <!-- customer Reviwe Singel slide -->
+                    <div class="border-[#0000001a] border-2 mx-2 p-6 rounded-2xl h-64">
+                        <!-- 5 star -->
+                        <div class="flex flex-row gap-2">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                        </div>
+                        <!-- Name -->
+                        <div class="flex flex-row items-center gap-2 pt-4 pb-3">
+                            <h2 class="font-bold text-xl capitalize">sarah m</h2>
+                            <svg class="bg-green-500 p-1 rounded-full w-5 h-5 font-bold text-white" data-slot="icon"
+                                fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+                            </svg>
+                        </div>
+                        <!-- content -->
+                        <div>
+                            <p class="opacity-60 line-clamp-4 text-base text-black">"I'm blown away by the quality and
+                                style
+                                of the
+                                clothes I received from
+                                Shop.co. From casual
+                                wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+                        </div>
+
                     </div>
-                    <!-- Name -->
-                    <div class="flex flex-row items-center gap-2 pt-4 pb-3">
-                        <h2 class="font-bold text-xl capitalize">sarah m</h2>
-                        <svg class="bg-green-500 p-1 rounded-full w-5 h-5 font-bold text-white" data-slot="icon"
-                            fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
-                        </svg>
+
+                    <div class="border-[#0000001a] border-2 mx-2 p-6 rounded-2xl h-64">
+
+                        <div class="flex flex-row gap-2">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                        </div>
+
+                        <div class="flex flex-row items-center gap-2 pt-4 pb-3">
+                            <h2 class="font-bold text-xl capitalize">Alex K.</h2>
+                            <svg class="bg-green-500 p-1 rounded-full w-5 h-5 font-bold text-white" data-slot="icon"
+                                fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <p class="opacity-60 line-clamp-4 text-base text-black">"Finding clothes that align with my
+                                personal style used to be a challenge until I discovered Shop.co. The range of
+                                options they offer is truly remarkable, catering to a variety of tastes and occasions.”
+                            </p>
+                        </div>
+
                     </div>
-                    <!-- content -->
-                    <div>
-                        <p class="opacity-60 line-clamp-4 text-base text-black">"I'm blown away by the quality and style
-                            of the
-                            clothes I received from
-                            Shop.co. From casual
-                            wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+
+                    <div class="border-[#0000001a] border-2 mx-2 p-6 rounded-2xl h-64">
+
+                        <div class="flex flex-row gap-2">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                        </div>
+
+                        <div class="flex flex-row items-center gap-2 pt-4 pb-3">
+                            <h2 class="font-bold text-xl capitalize">James L.</h2>
+                            <svg class="bg-green-500 p-1 rounded-full w-5 h-5 font-bold text-white" data-slot="icon"
+                                fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <p class="opacity-60 line-clamp-4 text-base text-black">"As someone who's always on the
+                                lookout
+                                for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The
+                                selection of clothes is not only diverse but also on-point with the latest trends.”</p>
+                        </div>
+
                     </div>
+
+                    <div class="border-[#0000001a] border-2 mx-2 p-6 rounded-2xl h-64">
+
+                        <div class="flex flex-row gap-2">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                        </div>
+
+                        <div class="flex flex-row items-center gap-2 pt-4 pb-3">
+                            <h2 class="font-bold text-xl capitalize">Mooen</h2>
+                            <svg class="bg-green-500 p-1 rounded-full w-5 h-5 font-bold text-white" data-slot="icon"
+                                fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <p class="opacity-60 line-clamp-4 text-base text-black">"As someone who's always on the
+                                lookout
+                                for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The
+                                selection of clothes is not only diverse but also on-point with the latest trends.”</p>
+                        </div>
+
+                    </div>
+
+                    <div class="border-[#0000001a] border-2 mx-2 p-6 rounded-2xl h-64">
+
+                        <div class="flex flex-row gap-2">
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
+                            </svg>
+                        </div>
+
+                        <div class="flex flex-row items-center gap-2 pt-4 pb-3">
+                            <h2 class="font-bold text-xl capitalize">Sarah M.</h2>
+                            <svg class="bg-green-500 p-1 rounded-full w-5 h-5 font-bold text-white" data-slot="icon"
+                                fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <p class="opacity-60 line-clamp-4 text-base text-black">"I'm blown away by the quality and
+                                style
+                                of the clothes I received from Shop.co. From casual wear to elegant dresses,
+                                every piece I've bought has exceeded my expectations.”</p>
+                        </div>
+
+                    </div>
+
+
+
 
                 </div>
-
-                <div class="border-[#0000001a] border-2 mx-2 p-6 rounded-2xl h-64">
-
-                    <div class="flex flex-row gap-2">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                    </div>
-
-                    <div class="flex flex-row items-center gap-2 pt-4 pb-3">
-                        <h2 class="font-bold text-xl capitalize">Alex K.</h2>
-                        <svg class="bg-green-500 p-1 rounded-full w-5 h-5 font-bold text-white" data-slot="icon"
-                            fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
-                        </svg>
-                    </div>
-
-                    <div>
-                        <p class="opacity-60 line-clamp-4 text-base text-black">"Finding clothes that align with my
-                            personal style used to be a challenge until I discovered Shop.co. The range of
-                            options they offer is truly remarkable, catering to a variety of tastes and occasions.”</p>
-                    </div>
-
-                </div>
-
-                <div class="border-[#0000001a] border-2 mx-2 p-6 rounded-2xl h-64">
-
-                    <div class="flex flex-row gap-2">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                    </div>
-
-                    <div class="flex flex-row items-center gap-2 pt-4 pb-3">
-                        <h2 class="font-bold text-xl capitalize">James L.</h2>
-                        <svg class="bg-green-500 p-1 rounded-full w-5 h-5 font-bold text-white" data-slot="icon"
-                            fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
-                        </svg>
-                    </div>
-
-                    <div>
-                        <p class="opacity-60 line-clamp-4 text-base text-black">"As someone who's always on the lookout
-                            for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The
-                            selection of clothes is not only diverse but also on-point with the latest trends.”</p>
-                    </div>
-
-                </div>
-
-                <div class="border-[#0000001a] border-2 mx-2 p-6 rounded-2xl h-64">
-
-                    <div class="flex flex-row gap-2">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                    </div>
-
-                    <div class="flex flex-row items-center gap-2 pt-4 pb-3">
-                        <h2 class="font-bold text-xl capitalize">Mooen</h2>
-                        <svg class="bg-green-500 p-1 rounded-full w-5 h-5 font-bold text-white" data-slot="icon"
-                            fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
-                        </svg>
-                    </div>
-
-                    <div>
-                        <p class="opacity-60 line-clamp-4 text-base text-black">"As someone who's always on the lookout
-                            for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The
-                            selection of clothes is not only diverse but also on-point with the latest trends.”</p>
-                    </div>
-
-                </div>
-
-                <div class="border-[#0000001a] border-2 mx-2 p-6 rounded-2xl h-64">
-
-                    <div class="flex flex-row gap-2">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .587l3.668 7.431 8.232 1.195-5.95 5.793 1.405 8.186L12 18.896l-7.355 3.865 1.405-8.186-5.95-5.793 8.232-1.195z" />
-                        </svg>
-                    </div>
-
-                    <div class="flex flex-row items-center gap-2 pt-4 pb-3">
-                        <h2 class="font-bold text-xl capitalize">Sarah M.</h2>
-                        <svg class="bg-green-500 p-1 rounded-full w-5 h-5 font-bold text-white" data-slot="icon"
-                            fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"></path>
-                        </svg>
-                    </div>
-
-                    <div>
-                        <p class="opacity-60 line-clamp-4 text-base text-black">"I'm blown away by the quality and style
-                            of the clothes I received from Shop.co. From casual wear to elegant dresses,
-                            every piece I've bought has exceeded my expectations.”</p>
-                    </div>
-
-                </div>
-
-
-
-
             </div>
         </div>
     </div>
@@ -872,25 +899,41 @@
     <!--########### Footer section #########-->
     <footer>
         <div
-            class="relative z-10 flex justify-between items-center bg-black mx-auto mb-[-100px] p-9 rounded-3xl w-11/12">
-            <div class="w-3/5">
-                <h2 class="text-white uppercase">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+            class="relative z-10 flex sm:flex-row flex-col justify-between items-center gap-4 sm:gap-0 bg-black mx-auto mb-[-100px] p-8 sm:p-16 rounded-3xl w-11/12 max-w-8xl">
+            <div class="w-full sm:w-3/4">
+                <h2 class="w-full sm:w-4/5 font-bold font-integral text-3xl text-white sm:text-[40px] uppercase">STAY
+                    UPTO DATE
+                    ABOUT OUR
+                    LATEST
+                    OFFERS</h2>
             </div>
-            <div class="flex flex-col gap-2 pl-28 w-1/3">
+            <div class="relative flex flex-col gap-3 w-full sm:w-1/3">
                 <input class="px-10 py-2 rounded-full" type="email" name="newslatter" id="newslatter"
                     placeholder="Enter your email address">
-                <button class="bg-white px-10 py-2 rounded-full text-black" type="submit">subscribe to
+                <svg class="top-2 left-4 absolute w-5 h-6 text-secondary" data-slot="icon" fill="none"
+                    stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75">
+                    </path>
+                </svg>
+                <button class="bg-white px-10 py-2 rounded-full font-semibold text-black capitalize"
+                    type="submit">subscribe to
                     newslatter</button>
             </div>
         </div>
 
 
         <div class="bg-[#F0F0F0] pt-20 pb-5 w-full">
-            <div class="mx-auto w-11/12">
-                <div class="flex justify-between border-[#0000001a] py-16 border-b-2">
-                    <div class="w-1/4">
-                        <h2>shop.co</h2>
-                        <p class="">We have clothes that suits your style and which you’re proud to wear. From
+            <div class="mx-auto w-11/12 max-w-8xl">
+                <div class="flex sm:flex-row flex-col gap-16 border-[#0000001a] py-16 border-b-2">
+                    <div class="sm:w-1/4">
+                        <a href="#" class="font-bold font-integral text-3xl text-black uppercase">shop.co</a>
+                        <p class="py-5 w-3/4 font-normal text-secondary text-sm">We have clothes that suits your style
+                            and
+                            which you’re
+                            proud to
+                            wear. From
                             women to men.</p>
                         <div class="flex gap-3">
                             <div class="border-[#00000033] border-2 bg-white hover:bg-black rounded-full w-11 h-11">
@@ -907,46 +950,51 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h2 class="uppercase">company</h2>
-                        <ul>
-                            <li>about</li>
-                            <li>features</li>
-                            <li>works</li>
-                            <li>career</li>
-                        </ul>
+                    <div class="flex flex-row">
+                        <div class="pr-14 sm:pr-10">
+                            <h2 class="font-medium text-lg uppercase tracking-widest">company</h2>
+                            <ul class="space-y-3 pt-5 text-secondary capitalize cursor-pointer">
+                                <li>about</li>
+                                <li>features</li>
+                                <li>works</li>
+                                <li>career</li>
+                            </ul>
+                        </div>
+                        <div class="pl-14 sm:pl-10">
+                            <h2 class="font-medium text-lg uppercase tracking-widest">help</h2>
+                            <ul class="space-y-3 pt-5 text-secondary capitalize cursor-pointer">
+                                <li>customer support</li>
+                                <li>delivery details </li>
+                                <li>terms & conditions</li>
+                                <li>privacy policy</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <h2 class="uppercase">help</h2>
-                        <ul>
-                            <li>customer support</li>
-                            <li>delivery details </li>
-                            <li>terms & conditions</li>
-                            <li>privacy policy</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="uppercase">faq</h2>
-                        <ul>
-                            <li>account</li>
-                            <li>manage deliveries</li>
-                            <li>orders</li>
-                            <li>payments</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="uppercase">resources</h2>
-                        <ul>
-                            <li>free eBooks</li>
-                            <li>development tutorial</li>
-                            <li>how to blog</li>
-                            <li>youtube playlist</li>
-                        </ul>
+
+                    <div class="flex flex-row">
+                        <div class="pr-10 sm:pr-9">
+                            <h2 class="font-medium text-lg uppercase tracking-widest">faq</h2>
+                            <ul class="space-y-3 pt-5 text-secondary capitalize cursor-pointer">
+                                <li>account</li>
+                                <li>manage deliveries</li>
+                                <li>orders</li>
+                                <li>payments</li>
+                            </ul>
+                        </div>
+                        <div class="pl-10 sm:pl-9">
+                            <h2 class="font-medium text-lg uppercase tracking-widest">resources</h2>
+                            <ul class="space-y-3 pt-5 text-secondary capitalize cursor-pointer">
+                                <li>free eBooks</li>
+                                <li>development tutorial</li>
+                                <li>how to blog</li>
+                                <li>youtube playlist</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="flex justify-between pt-3">
+                <div class="flex sm:flex-row flex-col justify-between items-center pt-3">
                     <div>
-                        Shop.co © 2000-2021, All rights reserved
+                        <h2 class="text-secondary text-sm capitalize">Shop.co © 2000-2021, All rights reserved</h2>
                     </div>
                     <div class="flex">
                         <img class="w-14 h-12" src="./images/Visa.png" alt="">
