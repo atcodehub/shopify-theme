@@ -79,6 +79,29 @@ $(document).ready(function () {
 
 });
 
+// ################ Product Quantity Counter #################### 
+const minusButton = document.getElementById('minusButton');
+const plusButton = document.getElementById('plusButton');
+const productCountElement = document.getElementById('productCount');
+
+let productCount = 1;
+
+minusButton.addEventListener('click', () => {
+    if (productCount > 1) {
+        productCount--;
+        productCountElement.textContent = productCount;
+    }
+});
+
+
+plusButton.addEventListener('click', () => {
+    productCount++;
+    productCountElement.textContent = productCount;
+});
+
+
+
+
 
 
 // ########## toggle Dropdown Menu Scrip ##########
