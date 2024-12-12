@@ -129,3 +129,6 @@ function toggleButtonStyle(button) {
     button.classList.toggle('bg-gray-100');
     button.classList.toggle('text-black');
 }
+
+
+// collection dropdown
