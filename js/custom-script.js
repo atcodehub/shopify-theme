@@ -1,4 +1,5 @@
 // ########### slick slider js  ##################
+
 $(document).ready(function () {
     $('.slider').slick({
         dots: false,
@@ -13,7 +14,7 @@ $(document).ready(function () {
             {
                 breakpoint: 420,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1
                 }
             },
@@ -27,7 +28,7 @@ $(document).ready(function () {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 2
                 }
             }
@@ -69,15 +70,30 @@ $(document).ready(function () {
         ]
     });
 
-
-
-
-
-
-
-
-
 });
+
+// ################ Product Quantity Counter #################### 
+const minusButton = document.getElementById('minusButton');
+const plusButton = document.getElementById('plusButton');
+const productCountElement = document.getElementById('productCount');
+
+let productCount = 1;
+
+minusButton.addEventListener('click', () => {
+    if (productCount > 1) {
+        productCount--;
+        productCountElement.textContent = productCount;
+    }
+});
+
+
+plusButton.addEventListener('click', () => {
+    productCount++;
+    productCountElement.textContent = productCount;
+});
+
+
+
 
 
 
@@ -129,3 +145,70 @@ function toggleButtonStyle(button) {
     button.classList.toggle('bg-gray-100');
     button.classList.toggle('text-black');
 }
+
+
+// collection dropdown
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdowns = [
+        { toggle: "dropdownToggle", menu: "dropdownMenu" },
+        { toggle: "dropdownToggle2", menu: "dropdownMenu2" },
+        { toggle: "dropdownToggle3", menu: "dropdownMenu3" },
+        { toggle: "dropdownToggle4", menu: "dropdownMenu4" },
+    ];
+
+    dropdowns.forEach(({ toggle, menu }) => {
+        const toggleButton = document.getElementById(toggle);
+        const dropdownMenu = document.getElementById(menu);
+
+        // Keep the dropdown open by default
+        dropdownMenu.style.display = "block";
+
+        // Add event listener to toggle visibility
+        toggleButton.addEventListener("click", () => {
+            const isVisible = dropdownMenu.style.display === "block";
+            dropdownMenu.style.display = isVisible ? "none" : "block";
+        });
+    });
+});
+
+
+// collection inner dropdown
+
+function toggleDropdown(id) {
+    const dropdown = document.getElementById(id);
+    dropdown.classList.toggle('hidden');
+  }
+  
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const minPriceSlider = document.getElementById("minPrice");
+    const maxPriceSlider = document.getElementById("maxPrice");
+    const minValue = document.getElementById("minValue");
+    const maxValue = document.getElementById("maxValue");
+  
+    // Function to update the range values
+    const updatePriceRange = () => {
+      const minVal = parseInt(minPriceSlider.value);
+      const maxVal = parseInt(maxPriceSlider.value);
+  
+      if (minVal > maxVal) {
+        minPriceSlider.value = maxVal;
+      }
+  
+      minValue.textContent = `$${minPriceSlider.value}`;
+      maxValue.textContent = `$${maxPriceSlider.value}`;
+    };
+  
+    // Add event listeners to both sliders
+    minPriceSlider.addEventListener("input", updatePriceRange);
+    maxPriceSlider.addEventListener("input", updatePriceRange);
+  
+    // Initialize the range values on page load
+    updatePriceRange();
+  });
+
+
+
+
+
+  
