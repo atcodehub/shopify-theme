@@ -70,13 +70,6 @@ $(document).ready(function () {
     });
 
 
-
-
-
-
-
-
-
 });
 
 // ################ Product Quantity Counter #################### 
@@ -98,6 +91,48 @@ plusButton.addEventListener('click', () => {
     productCount++;
     productCountElement.textContent = productCount;
 });
+
+
+// ###### Product Detaile Page Tab #### 
+const tabButtons = document.querySelectorAll('.tablinks');
+for (var i = 0; i < tabButtons.length; i++) {
+    tabButtons[i].addEventListener('click', function () {
+        var tabName = this.dataset.tab;
+        var tabContent = document.getElementById(tabName);
+
+        var allTabContent = document.querySelectorAll('.tabcontent');
+        var allTabButtons = document.querySelectorAll('.tablinks');
+
+        for (var j = 0; j < allTabContent.length; j++) {
+            allTabContent[j].style.display = 'none';
+        }
+
+        for (var k = 0; k < allTabButtons.length; k++) {
+            allTabButtons[k].classList.remove('tab-active');
+            allTabButtons[k].parentElement.classList.remove('tab-active-parent');
+        }
+
+
+        tabContent.style.display = "block";
+        this.classList.add('tab-active');
+
+        this.parentElement.classList.add('tab-active-parent');
+    });
+}
+
+const tabButtonsList = document.querySelectorAll('.tablinks');
+const tabSecondButton = tabButtonsList[1];
+tabSecondButton.click();
+
+
+
+
+
+
+
+
+
+
 
 
 

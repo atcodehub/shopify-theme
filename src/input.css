@@ -60,6 +60,18 @@
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
+.tab button.tab-active {
+  color: black;
+}
+
+.tab-active-parent {
+  border-bottom: 2px solid black;
+}
+
+.tabcontent {
+  display: none;
+}
+
 @media screen and (max-width: 640px) {
   .customers-reviwe-slider .slick-list {
     padding: 0 50px 0 50px !important;
