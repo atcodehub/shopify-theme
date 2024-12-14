@@ -70,6 +70,7 @@ $(document).ready(function () {
         ]
     });
 
+
 });
 
 // ################ Product Quantity Counter #################### 
@@ -91,6 +92,48 @@ plusButton.addEventListener('click', () => {
     productCount++;
     productCountElement.textContent = productCount;
 });
+
+
+// ###### Product Detaile Page Tab #### 
+const tabButtons = document.querySelectorAll('.tablinks');
+for (var i = 0; i < tabButtons.length; i++) {
+    tabButtons[i].addEventListener('click', function () {
+        var tabName = this.dataset.tab;
+        var tabContent = document.getElementById(tabName);
+
+        var allTabContent = document.querySelectorAll('.tabcontent');
+        var allTabButtons = document.querySelectorAll('.tablinks');
+
+        for (var j = 0; j < allTabContent.length; j++) {
+            allTabContent[j].style.display = 'none';
+        }
+
+        for (var k = 0; k < allTabButtons.length; k++) {
+            allTabButtons[k].classList.remove('tab-active');
+            allTabButtons[k].parentElement.classList.remove('tab-active-parent');
+        }
+
+
+        tabContent.style.display = "block";
+        this.classList.add('tab-active');
+
+        this.parentElement.classList.add('tab-active-parent');
+    });
+}
+
+const tabButtonsList = document.querySelectorAll('.tablinks');
+const tabSecondButton = tabButtonsList[1];
+tabSecondButton.click();
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -177,38 +220,38 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleDropdown(id) {
     const dropdown = document.getElementById(id);
     dropdown.classList.toggle('hidden');
-  }
-  
+}
 
-  document.addEventListener("DOMContentLoaded", () => {
+
+document.addEventListener("DOMContentLoaded", () => {
     const minPriceSlider = document.getElementById("minPrice");
     const maxPriceSlider = document.getElementById("maxPrice");
     const minValue = document.getElementById("minValue");
     const maxValue = document.getElementById("maxValue");
-  
+
     // Function to update the range values
     const updatePriceRange = () => {
-      const minVal = parseInt(minPriceSlider.value);
-      const maxVal = parseInt(maxPriceSlider.value);
-  
-      if (minVal > maxVal) {
-        minPriceSlider.value = maxVal;
-      }
-  
-      minValue.textContent = `$${minPriceSlider.value}`;
-      maxValue.textContent = `$${maxPriceSlider.value}`;
+        const minVal = parseInt(minPriceSlider.value);
+        const maxVal = parseInt(maxPriceSlider.value);
+
+        if (minVal > maxVal) {
+            minPriceSlider.value = maxVal;
+        }
+
+        minValue.textContent = `$${minPriceSlider.value}`;
+        maxValue.textContent = `$${maxPriceSlider.value}`;
     };
-  
+
     // Add event listeners to both sliders
     minPriceSlider.addEventListener("input", updatePriceRange);
     maxPriceSlider.addEventListener("input", updatePriceRange);
-  
+
     // Initialize the range values on page load
     updatePriceRange();
-  });
+});
 
 
 
 
 
-  
+
